@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    padding: 25px;
+}
+
+body {
+    overflow: hidden;
+    background: #000;
+}
+
+ul li {
+    line-height: 1rem;
+    margin-top: 15px;
+}
+
+ul li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    background: rgb(91, 91, 255);
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+
+ul li a:hover {
+    background: rgb(30, 30, 255);
+}
+
+#globe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#nav {
+    position: absolute;
+    width: 150px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+#settings_content button{
+    cursor: pointer;
+    border: none;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    background: rgb(91, 91, 255);
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+
+#settings_content button:hover{
+    background: rgb(30, 30, 255);
+}
+
+#bg {
+    position: absolute;
+    background: white;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#content {
+    padding: 0 25px;
+}
+
+#info {
+    display: none;
+    position: absolute;
+    max-width: 500px;
+    height: 400px;
+    right: 25px;
+    top: 10px;
+    z-index: 2;
+    background: rgba(0,0,0, 0.8);
+    padding: 15px;
+    overflow-y: scroll;
+    z-index: 1000;
+}
+
+#info img {
+    display: block;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+#info p {
+    color: white;
+}
+
+#info ul {
+    color: white;
+    padding: 0;
+}
+
+.active {
+    display: block;
+}
+
+#button-close,
+#shake-info button {
+    color: white;
+    background: red;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+#info-title {
+    color: white;
+    font-size: 24px;
+}
+
+#shake-info {
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    right: 25px;
+    bottom: 10px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.264);
+    padding: 15px;
+    color: white;
+}
+
+#shake-info h1::before {
+    content: "•";
+    color: #FFFF00;
+    margin-right: 10px;
+}
+
+#faq {
+    position: fixed;
+    top: 285px;
+    right: 180px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 100;
+}
+
+#faq ul {
+    padding: 0 15px;
+    padding-bottom: 15px;
+}
+
+#faq li {
+    color: #ffffff;
+}
+
+#faq li span {
+    margin-right: 10px;
+    color: red;
+}
+
+
+#Moonquake_point {
+    color: yellow !important;
+}
+
+#Apollo_point {
+    color: red !important;
+}
+
+#ChooseApollo_point {
+    color: green !important;
+}
+
+div {
+    border-radius: 10px !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* Ширина скролла */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Стилизация бегунка скролла */
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    /* Цвет бегунка скролла */
+    border-radius: 5px;
+    /* Скругление углов бегунка */
+}
+
+/* Если нужно стилизовать трек скролла (бар скролла) */
+::-webkit-scrollbar-track {
+    background-color: #303030;
+    /* Цвет трека скролла */
+}
+
+
+#graphics{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top:10px;
+    left: 15px;
+    width: 450px;
+    height: auto;
+    margin: 0 !important;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px !important;
+}
+
+#graphics ul{
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#graphics ul li{
+    margin-right: 5px;
+    flex: 1 0 auto;
+}
+
+#graphics ul li button{
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    background: rgb(91, 91, 255);
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    width: 75px;
+}
+
+#graphics ul li button:hover{
+    background: rgb(30, 30, 255);
+}
+
+
+#graphics img{
+    width: 100%;
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+#settings{
+    top: 10px;
+    right: 180px;
+    position: absolute;
+    padding: 25px;
+    height: auto;
+    z-index: 150;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#settings_content{
+    display: flex;
+    flex-direction: column;
+}
+
+#settings_content input, #settings_content select, #settings_content button{
+    margin-top: 10px;
+}
+
+#year{
+    display: block;
+    padding: 5px;
+    background: rgb(91, 91, 255);
+    color: white;
+    border: none;
+}
+
+#help{
+    color: white;
+    padding: 0 15px;
+    margin-top: 10px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/three.js"></script>
+</head>
+
+<body>
+    <div id="settings">
+        <div id="settings_content">
+
+            <input type="range" id="zoom-range" min="1" max="5" step="0.1" value="3">
+            <input type="range" id="speed-range" min="0" max="0.003" step="0.00001" value="0.00001">
+            <select id="year"></select>
+            <button id="change-moon" onclick='loadingRelief()'>Relief/Default</button>
+            <button id="on-wind" onclick='Wind()'>Off/On Wind</button>
+            <input type="range" type="text" id="change-opacity-wind" min="0.0" max="1" step="0.1" value="0.5">
+        </div>
+
+    </div>
+
+    <div id="nav">
+        <div id="bg">
+        </div>
+        <div id="nav-content">
+
+        </div>
+    </div>
+
+    <div id="shake-info">
+        <h1>Moonquake</h1>
+        <ul>
+            <li>Data: <span id='moonquake_date'></span></li>
+            <li>Coordinates: <span id='moonquake_coord'></span></li>
+            <li>Magnitude: <span id='moonquake_magn'></span></li>
+        </ul>
+        <button onclick='closeShakeInfo(this)'>Close</button>
+    </div>
+
+    <div id="graphics">
+        <ul>
+            <li><button onclick="loadingScreen('DENSITY')">DENSITY</button></li>
+            <li><button onclick="loadingScreen('AP_RATIO')">AP_RATIO</button></li>
+            <li><button onclick="loadingScreen('VEL')">VEL</button></li>
+            <li><button onclick="loadingScreen('VTH')">VTH</button></li>
+            <li><button onclick="loadingScreen('EAST')">EAST</button></li>
+            <li><button onclick="loadingScreen('NORTH')">NORTH</button></li>
+            <li><button onclick="loadingScreen('IA')">IA</button></li>
+            <li><button onclick="loadingScreen('IB')">IB</button></li>
+            <li><button onclick="loadingScreen('RMS')">RMS</button></li>
+            <li><button onclick="loadingScreen('XNOISE')">XNOISE</button></li>
+        </ul>
+        <img src="#" alt="">
+        <ol id = 'help'>
+            <li>Density (Proton Density)</li>
+            <li>Alpha to Proton Ratio (AP Ratio)</li>
+            <li>Proton Bulk Speed (VEL)</li>
+            <li>Proton Thermal Velocity (VTH)</li>
+            <li>Proton Flow Angle toward East (EAST)</li>
+            <li>Proton Flow Angle toward North (NORTH)</li>
+            <li>IA: This is a flag indicating how the alpha angle was derived in the measurements.</li>
+            <li>IB: This is a flag indicating how the beta angle was derived in the measurements.</li>
+            <li>Percentage Error in Fitting Program (RMS)</li>
+            <li>Noise level used in estimating angles (XNOISE)</li>
+        </ol>
+    </div>
+
+    <div id="info">
+        <div id="info-title">
+        </div>
+        <img src="#" alt="photo">
+        <p></p>
+        <ul>
+            <li>Coordinates: <span id='info_cord'></span></li>
+        </ul>
+        <button id="button-close">Close</button>
+    </div>
+
+    <div id="faq">
+        <ul>
+            <li><span id="Moonquake_point">•</span>Moonquake</li>
+            <li><span id="Apollo_point">•</span>Apollo</li>
+            <li><span id="ChooseApollo_point">•</span>Choose Apollo</li>
+        </ul>
+    </div>
+    <div id="globe">
+    </div>
+    <script src="/script..js"></script>
+</body>
+
+</html>
